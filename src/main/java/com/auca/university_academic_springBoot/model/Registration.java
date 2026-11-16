@@ -18,15 +18,20 @@ public class Registration {
     @Id 
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column (nullable = false)
     private LocalDate registrationDate;
+
     @Column (nullable = false)
     private String academicYear;
+
     @Column (nullable = false)
     private EResgitrationStatus status;
+
     @Column (nullable = false)
     private Double grade;
 
+    
     @ManyToOne (fetch = FetchType.LAZY, optional = false)
     @JoinColumn (name = "student_id", nullable = false)
     private Student student;

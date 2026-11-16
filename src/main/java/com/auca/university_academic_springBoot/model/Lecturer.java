@@ -11,12 +11,14 @@ public class Lecturer {
     @Id 
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column (name = "first_name", nullable = false)
     private String firstName;
+
      @Column (name = "last_name", nullable = false)
     private String lastName;
 
-    @Column (unique = true, nullable = false)
+    @Column (name="email", unique = true, length = 150, nullable = false)
     private String email;
 
     @OneToOne (mappedBy = "head")

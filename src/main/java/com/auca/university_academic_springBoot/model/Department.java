@@ -14,9 +14,10 @@ public class Department {
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column (name = "name", nullable = false, unique = true)
+    @Column (name = "name", nullable = false, unique = true, length = 30)
     private String name;
-    @Column (name = "code", nullable = false, unique = true)
+
+    @Column (name = "code", nullable = false, unique = true, length = 30)
     private String code;
 
     @OneToOne 
