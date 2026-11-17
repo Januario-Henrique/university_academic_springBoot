@@ -26,6 +26,7 @@ public class Registration {
     private String academicYear;
 
     @Column (nullable = false)
+    @Enumerated(EnumType.STRING)
     private EResgitrationStatus status;
 
     @Column (nullable = false)
