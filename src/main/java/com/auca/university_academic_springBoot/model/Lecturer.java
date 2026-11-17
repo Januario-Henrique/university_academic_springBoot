@@ -15,7 +15,7 @@ public class Lecturer {
     @Column (name = "first_name", nullable = false)
     private String firstName;
 
-     @Column (name = "last_name", nullable = false)
+    @Column (name = "last_name", nullable = false)
     private String lastName;
 
     @Column (name="email", unique = true, length = 150, nullable = false)
